@@ -116,6 +116,7 @@ class StringConverter {
 		$link = explode('/', $link);
 		$prefixes = Configure::read('Routing.prefixes');
 		$linkArr = array_fill_keys($prefixes, false);
+		$prefixes []= 'base';
 		foreach ($link as $linkElement) {
 			if ($linkElement != null) {
 				$linkElementE = explode(':', $linkElement);
